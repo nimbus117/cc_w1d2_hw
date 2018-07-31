@@ -31,27 +31,35 @@ def add_string_as_number(sone,stwo)
   return sone.to_i + stwo.to_i
 end
 
+#def number_to_full_month_name(num)
+#  case num 
+#  when 1
+#    return "January"
+#  when 3
+#    return "March"
+#  when 9
+#    return "September"
+#  end
+#end
+
+#def number_to_short_month_name(num)
+#  case num 
+#  when 1
+#    return "Jan"
+#  when 4
+#    return "Apr"
+#  when 10
+#    return "Oct"
+#  end
+#end
+
 def number_to_full_month_name(num)
-  case num 
-  when 1
-    return "January"
-  when 3
-    return "March"
-  when 9
-    return "September"
-  end
+  months = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
+  return months[num - 1]
 end
 
-
 def number_to_short_month_name(num)
-  case num 
-  when 1
-    return "Jan"
-  when 4
-    return "Apr"
-  when 10
-    return "Oct"
-  end
+  return number_to_full_month_name(num)[0..2]
 end
 
 def volume_of_a_cube(num)
