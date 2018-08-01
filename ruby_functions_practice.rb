@@ -1,3 +1,4 @@
+require 'date'
 def return_10()
   return 10
 end
@@ -53,9 +54,13 @@ end
 #  end
 #end
 
+#Def number_to_full_month_name(num)
+#  months = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
+#  return months[num - 1]
+#End
+
 def number_to_full_month_name(num)
-  months = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
-  return months[num - 1]
+  return Date::MONTHNAMES[num]
 end
 
 def number_to_short_month_name(num)
